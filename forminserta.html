@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Formulario de inserción</title>
+<style type="text/css">
+
+.barra{
+	background-color:RED;
+	font-family: Tahoma;
+  position: absolute;
+  background: #303030;
+}
+
+.color_barra{
+  color: #09F;
+}
+
+.linea {
+    background-color: rgba(0,0,0,0.07);
+    border-width: 0;
+    color: rgba(0,0,0,0.07);
+    height: 1px;
+    margin: 0 -8px 16px -8px;
+}
+
+.titulos{
+	color:#424242;
+}
+.home{
+	color:#FF0000;
+}
+
+body {
+	font-family: Tahoma;
+}
+
+p {
+	text-align: center;
+}
+
+</style>
+</head>
+
+<body style="background: rgb(255, 255, 255);">
+
+<div class="barra" >
+<h3 class="color_barra">Formulario para insertar pel&iacute;culas en la Base de Datos</h3>
+</div>
+
+<hr class="linea">
+
+<form id="form" name="form" method="post" action="insertapeliculas.php">
+  <h5 class="titulos">Ingrese el nombre de la película:
+    <input name="nombre" type="text" id="nombre" size="100" />
+  </h5>
+  <h5 class="titulos"> Ingrese la url de la película: 
+    <input name="url" type="text" id="url" size="105" />
+  </h5>
+  <h5 class="titulos"> Ingrese la calificación de la película: 
+	  <input name="calificacion" type="text" id="calificacion" size="5" />
+  </h5>
+  <hr class="linea">
+
+  <input name="Enviar" type="submit" value="Enviar" />
+
+</form>
+
+  <h5><a href="index1.php" class="home">Volver a Home</a></h5>
+
+  </body>
+
+  </html>
