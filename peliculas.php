@@ -25,13 +25,13 @@ $consulta = mysql_query("SELECT * FROM pelicula WHERE id_pelicula='$id_pelicula'
 while ($row=mysql_fetch_array($consulta)) {
 
 $id_pelicula=$row['id_pelicula'];
-$nombre_pelicula=$row['nombre_pelicula'];
+$nombre=$row['nombre'];
 $ponderacion=$row['ponderacion'];
 $identificador=$row['identificador'];
 
 echo "Los datos de la película que ha solicitado son los siguientes: ";
 echo "<br><br>";
-echo "Nombre: <strong>".($nombre_pelicula)."</strong><br>";
+echo "Nombre: <strong>".($nombre)."</strong><br>";
 echo "Calificación: <strong>".($ponderacion)."</strong><br>";
 echo "URL: <strong>".($identificador)."</strong><br>";
 }

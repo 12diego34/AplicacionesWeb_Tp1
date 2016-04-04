@@ -27,8 +27,8 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE IF NOT EXISTS `pelicula` (
-  `id_pelicula` int(11) NOT NULL,
-  `nombre_pelicula` varchar(50) NOT NULL,
+  `id_pelicula` int(11) NOT NULL, 
+  `nombre` varchar(50) NOT NULL,
   `ponderacion` int(11) NOT NULL,
   `identificador` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -37,7 +37,7 @@ CREATE TABLE IF NOT EXISTS `pelicula` (
 -- Volcado de datos para la tabla `pelicula`
 --
 
-INSERT INTO `pelicula` (`id_pelicula`, `nombre_pelicula`, `ponderacion`, `identificador`) VALUES
+INSERT INTO `pelicula` (`id_pelicula`, `nombre`, `ponderacion`, `identificador`) VALUES
 (1, 'Batman', 5, 'http://www.imdb.com/title/tt0096895'),
 (2, 'La caza al Octubre Rojo', 5, 'http://www.imdb.com/title/tt0099810'),
 (3, 'GoldenEye', 5, 'http://www.imdb.com/title/tt0113189'),
