@@ -14,11 +14,11 @@
 
 <?php
 
-if (isset($_GET['nombre_pelicula'])){
-	$nombre_pelicula = $_GET['nombre_pelicula'];
+if (isset($_GET['nombre'])){
+	$nombre = $_GET['nombre'];
 }
 else{
-	$nombre_pelicula = '';	
+	$nombre = '';	
 }
 
 if (isset($_GET['ponderacion'])){
@@ -35,19 +35,19 @@ else{
 	$identificador = '';	
 }
 	
-$consulta = mysql_query("SELECT * FROM pelicula WHERE nombre_pelicula LIKE '$nombre_pelicula' OR ponderacion LIKE '$ponderacion' OR identificador LIKE '$identificador'", $conexion);
+$consulta = mysql_query("SELECT * FROM pelicula WHERE nombre LIKE '$nombre' OR ponderacion LIKE '$ponderacion' OR identificador LIKE '$identificador'", $conexion);
 
 if (mysql_num_rows($consulta)!=0){
 	while($row=mysql_fetch_array($consulta)) 
 	{
 	$id_pelicula=$row['id_pelicula'];
-	$nombre_pelicula=$row['nombre_pelicula'];
+	$nombre=$row['nombre'];
 	$ponderacion=$row['ponderacion'];
 	$identificador=$row['identificador'];
 	
 	echo ("<table width='100%' border='0' cellpadding='0'>\n");
 	echo ("<tr>\n");
-	echo ("<td width='26%'><a href='peliculas.php?id_pelicula=$id_pelicula'>".($nombre_pelicula)."</a></td>\n");
+	echo ("<td width='26%'><a href='peliculas.php?id_pelicula=$id_pelicula'>".($nombre)."</a></td>\n");
 	echo ("<td width='26%'>".($ponderacion)."</td>\n");
 	echo ("<td width='26%'>".($identificador)."</td>\n");
 	echo ("<tr>\n");
@@ -59,7 +59,7 @@ else{
 	echo '<b>No hay pel&iacute;culas con las características seleccionadas</b><br /><br />';
 }
 ?>
-<h5><a href="formbusca.html">Volver a Buscar</a></h5>
+<h5><a href="buscar.html">Volver a Buscar</a></h5>
 <h5><a href="index.php">Volver a Home</a></h5>
 </body>
 </html>
