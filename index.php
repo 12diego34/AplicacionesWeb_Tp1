@@ -53,6 +53,8 @@
             <input type="text" value="Buscar pelicula" name="id" id="id" onfocus="if (this.value == 'Buscar pelicula') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar pelicula';}">
             <span id="searchBoostrap" class="glyphicon glyphicon-search"></span>        
         </div>
+        <div class="link_cat"><a href="forminserta.html">Agregar pel&iacute;culas</a>
+        </div>
       </div>
       
     </div><br>
@@ -96,6 +98,10 @@
     <a href="#" class="slider-arrow sa-left"></a>
     <a href="#" class="slider-arrow sa-right"></a>
     </div>
+    <div id="caja">
+      <div class="cat_title">Peliculas con puntajes<div class="link_cat">
+
+    </div>  
   </div>
   </br>
   <br></br>
