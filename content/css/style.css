@@ -4,7 +4,7 @@ Description: Theme basado en CineDoble de Rayden
 Version: v2.0
 */
 @import url(http://fonts.googleapis.com/css?family=Homenaje);
-body {color:#333333;font-size: 12px;background: #E1E1E1; font-family: Tahoma, Geneva, sans-serif;}
+body {color:#333333;font-size: 14px;background: #E1E1E1; font-family: Tahoma, Geneva, sans-serif; height: 1000px;}
 * {margin:0;padding:0;}
 .clear {clear:both;}
 img {border:0;}
@@ -63,7 +63,7 @@ a img.aligncenter {display: block;margin-left: auto;margin-right: auto}
 /* fin header */
 
 /* index */
-#contenido{width:724px;margin:0px;float:left;target:_blank;}
+#contenido{width:100%;margin:0px;float:left;target:_blank;}
 .pelicula {color:#555;width:155px;height:275px;margin: 0px 10px 10px 15px !important;float:left;position:relative; background: url(http://goo.gl/KqVZ66) no-repeat ;}
 .poster img {width: 155px;height:233px;image-rendering: auto;}
 .poster img:hover {filter:alpha(opacity=50);-moz-opacity: 0.5;-khtml-opacity: 0.5;opacity: 0.5;background: white;-o-transition: all 0.2s linear;-moz-transition: all 0.2s linear;-webkit-transition: all 0.2s linear;transition: all 0.2s linear;}
@@ -163,13 +163,15 @@ ol.listacomentarios li ul.children li.depth-2,ol.listacomentarios li ul.children
 
 /* Buscador */
 #search p {margin:0;font-size:85%;}
-#id {width: 290px;background: #ffffff;padding: 5px 5px 6px 6px;height: 20px;border: 2px solid #E8E8E8;color: #555;font-style:italic;font-size:13px; float: left;display: inline;-moz-border-radius-topleft: 5px;font-family: Tahoma, Geneva, sans-serif;
+#id {width: 290px;background: #ffffff;padding: 5px 5px 6px 6px;height: 29px;border: 2px solid #E8E8E8;color: #555;font-style:italic;font-size:13px;
+float: right;display: inline;-moz-border-radius-topleft: 5px;font-family: Tahoma, Geneva, sans-serif;border-left: none;
+-moz-border-radius-topleft: 0px;
 -moz-border-radius-topright: 0px;
 -moz-border-radius-bottomright: 0px;
 -moz-border-radius-bottomleft: 3px;
 -webkit-border-radius: 3px 0px 0px 3px;
 border-radius: 3px 0px 0px 3px;}
-#searchsubmit {background: #ffffff;display: block;width: 25px;height: 31px;line-height: 30px;float: right;cursor: pointer;border: 2px solid #E8E8E8;border-left: none;
+#searchsubmit {background: #ffffff;display: block;width: 25px;height: 30px;line-height: 30px;float: right;cursor: pointer;border: 2px solid #E8E8E8;border-right: none;
 -moz-border-radius-topleft: 0px;
 -moz-border-radius-topright: 5px;
 -moz-border-radius-bottomright: 5px;
@@ -177,13 +179,13 @@ border-radius: 3px 0px 0px 3px;}
 -webkit-border-radius: 0px 5px 5px 0px;
 border-radius: 0px 5px 5px 0px;}
 #buscadormenu {
-margin: 5.5px 0px 0px 30px;
+margin: 11px 40px 5px 30px;
 }
 
 #searchBoostrap{
 width: 5%;
 display: table-cell;
-text-align: center;
+text-align: left;
 vertical-align: center
 }
 /* Fin Buscador */
@@ -477,6 +479,31 @@ background:#508E22;
 text-align: center;
 COLOR: #ffffff;
 }
+
+.botonAgregar{
+	margin-top:3px;
+	margin-right: 4%;
+	font-size:16px;
+	padding:4px 5px;
+	float:right;
+	background:#CE5043;
+	color:#fff;
+	letter-spacing:1px
+}
+.botonAgregar a{color:#fff;text-decoration:none}
+.botonAgregar a:hover{color:#DFDFDF}
+
+.link_catv2 {
+    font-family: 'Homenaje', sans-serif;
+    font-size: 25px;
+    padding: 9px 0px 0px 0px;
+    height: 45px;
+    background: #CE5043;
+    color: #FFFFFF;
+    border-right: 0px solid #D86C01;
+}
+
+
 
 /* adpass */
 .hide_enl{user-select:none;-webkit-user-select:none; -moz-user-select:-moz-none;cursor:default;margin:10px;text-align:center;background:#CF5143;opacity: 0.8;}
