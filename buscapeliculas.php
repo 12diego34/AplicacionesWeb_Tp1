@@ -3,32 +3,32 @@ header('Content-type: application/json');
 include("conectarDb.php");
 
 class Pelicula {
+  public $identificador;
+  public $nombre;
   public $ponderacion;
 }
 
-$pelicula = new Pelicula();
+//$pelicula = new Pelicula();
 
-if (isset($_GET['id'])){
+if (!empty($_GET['id'])){
 	$identificador = $_GET['id'];
 }
 else{
 	$identificador = '';	
 }
 
-//$pelicula->identificador = $identificador;
-
-$consulta = mysql_query("SELECT ponderacion FROM pelicula WHERE identificador LIKE '$identificador'", $conexion);
+$consulta = mysql_query("SELECT identificador, nombre, ponderacion FROM pelicula WHERE nombre LIKE '%$identificador%' OR identificador LIKE '%$identificador%' ", $conexion);
+$peliculas = array();
 
 if (mysql_num_rows($consulta)!=0){
-	while($row=mysql_fetch_array($consulta)) 
+	while($row=mysql_fetch_assoc($consulta)) 
 	{
-	//$pelicula->id=$row['id_pelicula'];
-	//$pelicula->nombre=$row['nombre'];
-	$pelicula->ponderacion=$row['ponderacion'];
-	echo json_encode($pelicula);
+		$pelicula = new Pelicula();
+		$pelicula->identificador=$row['identificador'];
+		$pelicula->nombre=$row['nombre'];
+		$pelicula->ponderacion=$row['ponderacion'];
+		$peliculas[] = $pelicula;
 	}
 }
-else{
-	echo '{}';
-}
+echo json_encode($peliculas);
 ?>	

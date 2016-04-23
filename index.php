@@ -2,37 +2,18 @@
 <html>
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-  <link rel="stylesheet" href="jquery.bxslider.css">
+  
   <title>IMDb.dit</title>
   
-  <link rel="stylesheet" href="content/css/style.css" type="text/css" media="screen" />
   <link rel="shortcut icon" href="http://www.dit.ing.unp.edu.ar/wp-content/uploads/favicon.png" type="image/x-icon" />
-  <link rel="stylesheet" type="text/css" href="content/css/slidedvm.min.css">
+  <link rel="stylesheet" type="text/css" href="content/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="content/css/style.css"media="screen" />
+  <link rel="stylesheet" type="text/css" href="content/css/slidedvm.min.css"media="screen" />
 
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+  <script type="text/javascript" src="content/js/jquery-2.2.3.min.js" ></script>
   <script type="text/javascript" src="content/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="content/js/jquery.min.js" ></script>
-  <script type="text/javascript" src="content/js/jquery.bxslider.min.js"></script>
+  <script type="text/javascript" src="content/js/buscar.js"></script>
 
-  <script type="text/javascript">
-    jQuery(document).ready(function(e) {
-    jQuery('.slider').lbSlider({
-        leftBtn: '.sa-left',
-        rightBtn: '.sa-right',
-        visible: 7,
-        autoPlay: true,
-        autoPlayDelay: 3 /* Tiempo en segundos del movimiento */
-    })
-    jQuery( ".slider ul li" ).hover(function() {
-          var toltip = jQuery(this).children('a');
-          var textoTooltip = toltip.attr("title");
-          var linkTooltip = toltip.attr("href");
-          jQuery(this).append('<div class="tooltip" onClick="location.href=\'' + linkTooltip + '\'"><a href="' + linkTooltip + '">' + textoTooltip + '</a></div>');
-        }, function() {
-          jQuery( this ).find( ".tooltip" ).remove();
-        })
-    });
-    </script>
 </head>
 
 <body>
@@ -49,20 +30,19 @@
     <div id="toppic">
       <div id="topwrapper">
         <div id="buscadormenu">
-          <form method="get" id="searchform" action="buscapeliculas.php">
-            <input type="text" value="Buscar pelicula" name="id" id="id" onfocus="if (this.value == 'Buscar pelicula') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar pelicula';}">
-            <span id="searchBoostrap" class="glyphicon glyphicon-search"></span>        
+          <form id="searchform">
+            <input type="text" value="Buscar pelicula" name="id" id="id" onfocus="if (this.value == 'Buscar pelicula') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar pelicula';}"><input type="image" src="http://3.bp.blogspot.com/-zq0urLoOrUk/ToqiHUJxaqI/AAAAAAAAC9I/ZP8dcRolI0w/s00/lupa.png" id="searchsubmit">
         </div>
-        <div class="link_cat"><a href="forminserta.html">Agregar pel&iacute;culas</a>
+        <div class="link_catv2"><a href="forminserta.html">Agregar pel&iacute;culas</a>
         </div>
       </div>
       
     </div><br>
   
-    <div class="slider-wrap">
-      <div id="loaderpage">&nbsp;</div>
-    <div class="slider" style="visibility: hidden;">    
-    <ul>
+    <div id="peliculas" class="row">
+      <div class="col-sm-3">
+
+      <!--
       <li>
         <a title="Batman - El caballero de la noche" href ="http://www.imdb.com/title/tt0468569">
         <img class="panel" src="imagenes/1.jpg" alt="Batman - El caballero de la noche"/></a>
@@ -97,23 +77,9 @@
     </div>
     <a href="#" class="slider-arrow sa-left"></a>
     <a href="#" class="slider-arrow sa-right"></a>
+    -->
+
     </div>
-    <div id="caja">
-      <div class="cat_title">Peliculas con puntajes<div class="link_cat">
-
-    </div>  
-  </div>
-  </br>
-  <br></br>
-
-  <script type="text/javascript">
-    jQuery(window).load(function() {
-    jQuery('#loaderpage').fadeOut( "slow", function() {
-    jQuery('#loaderpage').remove(); 
-    jQuery('div.slider').css({ visibility: "visible" });
-  });
-})
-</script>
 
 </body>
 </html>
