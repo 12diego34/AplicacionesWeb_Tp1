@@ -23,30 +23,31 @@
     <div class="toppic">
         <h3 class="cabecera">Agregar pel&iacute;culas</h3>
     </div>
-  <div class="contenedor">
-    <form id="form" name="form" method="post" action="insertapeliculas.php">
-      <h5>Nombre:
-        <input name="nombre" type="text" id="nombre" size="24" />
-      </h5>
-      <br>
-      <h5> Calificación: 
-        <input name="ponderacion" type="text" id="ponderacion" size="2" />
-      </h5><br>
-      <h5> Id: 
-        <input name="identificador" type="text" id="identificador" size="10" />
-      </h5>
-      <br>
-      <h5> Url: 
-        <input name="url" type="text" id="url" size="30" />
-      </h5>   
-      <br>
-        <input name="Enviar" type="submit" value="Enviar" />
-    </form>
-    <h5><a href="index.php" class="home">Volver a Home</a></h5>
-  </div>
-  <div class="footer">
+    <div class="contenedor">
+      <form id="form" name="form" method="post" action="insertapeliculas.php">
+        <h5>Nombre:
+          <input name="nombre" type="text" id="nombre" size="24" />
+        </h5>
+        <br>
+        <h5> Calificación: 
+          <input name="ponderacion" type="text" id="ponderacion" size="2" />
+        </h5><br>
+        <h5> Id: 
+          <input name="identificador" type="text" id="identificador" size="10" />
+        </h5>
+        <br>
+        <h5> Url: 
+          <input name="url" type="text" id="url" size="30" />
+        </h5>   
+        <br>
+          <input name="Enviar" type="submit" value="Guardar"/>
+          <input value = "Volver" type="button" class="button_active" onclick="location.href='index.php';" />
+      </form>
+    </div>  
+    <div class="footer">
     <p>* Diego Carabajal - Carla Santos *</p>
   </div>
+  </div>
+  
   </body>
 </html> 
-    
