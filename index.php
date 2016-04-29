@@ -21,18 +21,17 @@
         <div class="buscadormenu">
           <form id="searchform">
              <input type="text" value="Buscar pelicula" name="id" id="id" onfocus="if (this.value == 'Buscar pelicula') {this.value = '';}" onblur="if (this.value == '') {this.value = 'Buscar pelicula';}">
-             <input type="image" src="http://3.bp.blogspot.com/-zq0urLoOrUk/ToqiHUJxaqI/AAAAAAAAC9I/ZP8dcRolI0w/s00/lupa.png" id="searchsubmit">
+             <span id="search-term-button" class="glyphicon glyphicon-search"></span>
            </form>
         </div>   
-        <div class="botonAgregar">
+          <div class="botonAgregar">
           <a href="forminserta.html">Agregar pel&iacute;culas</a>
         </div>
-        <div class="botonCompara">
-          <a href="">Comparar</a>
-        </div>
+       
     </div>
 <div id="peliculas" class="row">
-  <div class="col-sm-3"> </div>
+  <div class="col-sm-3"> </div> 
+     <div class="center-block">
 
 <div class="footer">
   <p>* Diego Carabajal - Carla Santos *</p>
