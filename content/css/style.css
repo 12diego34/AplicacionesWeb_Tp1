@@ -2,7 +2,7 @@
 html{
     width: 100%;
     height: 110%;
-    background-color: #E1E1E1;
+    background-color:#f4f4f4 url(docs/images/background.png)
   }
 @import url(http://fonts.googleapis.com/css?family=Homenaje);
 body {
@@ -18,12 +18,12 @@ body {
 
 .cabecera{
     margin-top: 2%;
-    background-color:#E1E1E1;
+    background-color:transparent;
     font-family: Tahoma;
     font-size: 27px;
     position: center;
     text-align: center; 
-    color: black;
+    color: white;
   }
 
 .logo h1 a{
@@ -38,16 +38,14 @@ body {
 }
 .marco{
 	width:100%;
-	height: 30%;
 	background-color: transparent;
 }
 
 /* Buscador */
-#id {
+#search-term-input {
 	background: white;
 	padding: 5px 5px 6px 6px;
 	width: 30%;
-	height: 2%;
 	border: 2px solid #E8E8E8;
 	color: #555;font-style:italic;font-size:14px;border-right: none; 
 	float: left;
@@ -86,12 +84,21 @@ body {
     background-color: transparent;
 }
 
+
+.contenedor2{
+	margin-top: 5%;
+    height:100%;
+    width:40%;
+    margin-left: 35%;
+    background-color: transparent;
+}
+
 .toppic {
 	margin-top: 5%;
 	width:100%;
 	height: 50px;
 	background: white;
-		background-color: #CE5043;
+	background-color: #CE5043;
 
 	margin:0 auto;
 	padding:0 auto;
@@ -104,27 +111,16 @@ body {
 .botonAgregar{
 	margin-top:3px;
 	margin-left: 9%;
+	margin-right: 3%;
 	font-size:17px;
 	padding:4px 5px;
-	float:left;
+	float:right;
 	background:transparent;
 	color:#FFFFFF;
 	letter-spacing:1px
 }
 .botonAgregar a{color:#FFFFFF;text-decoration:none}
 .botonAgregar a:hover{color:black}
-
-.botonCompara{
-	margin-top:3px;
-	margin-right: 4%;
-	font-size:17px;
-	padding:4px 5px;
-	float:right;
-	background:transparent;
-	letter-spacing:1px
-}
-.botonCompara a{color:#FFFFFF;text-decoration:none}
-.botonCompara a:hover{color:black}
 
 .peliculas {
 	margin-top: 10px;
@@ -138,11 +134,89 @@ body {
 
 .clear {clear:both;}
 
+span.overlay {
+    background: center center no-repeat rgba(0,0,0,.60);
+    border-radius: 3px;
+	height: 225px;
+	position: absolute;
+	width: 150px;
+	z-index: 10;
+	-webkit-box-shadow: 0px 0px 4px #000;
+	-moz-box-shadow: 0px 0px 4px  #000;
+	box-shadow: 0px 0px 4px  #000;
+    opacity: 0;
+    transition: opacity .25s ease;
+}
+span.overlay:hover {
+    opacity: 1;
+}
+span.overlay:hover::before{
+    content: 'Ir a Comparar';
+    text-shadow: 0px 0px 5px ;
+    height: 28px;
+    border-radius: 5px;
+    font-size: 18px;
+    color: white;
+    position:absolute;
+    top: 50%;
+    right: 14%;
+    cursor: pointer;
+}
+
+.rating-grupo, .rating-local{
+    text-align: center
+}
+
+.rating-win{
+    font-weight: bold;
+    color: #4caf50;
+}
+
+.rating-err{
+    font-weight: bold;
+    color: #e51c23;
+}
+.puntaje-form{
+    text-align: center
+}
+
+.item-pelicula{
+    text-align: center;
+    line-height: 0.2;
+}
+
+.item-pelicula .titulo{
+    margin-top: 2%;
+    color: black;
+    background-color: blue;
+    line-height: 1.2;
+}
+
+.item-pelicula .puntaje-modal{
+    text-shadow: none;
+    margin-top: 10px;
+}
+.item-pelicula .puntaje-modal .glyphicon-star,
+.item-pelicula .puntaje-modal .glyphicon-star-empty{
+    font-size: 28px
+}
+
+.glyphicon-star,
+.glyphicon-star-empty{
+    margin-bottom: 20px;
+    font-size: 24px;
+    color: #CE5043;
+}
+
+.stars{
+    text-align: center;
+}
+
 .footer {
-	margin-top: 40%;
+	margin-top: 10%;
 	position: relative;
 	width: 100%;
-	height: 30%;
+	height: 10%;
 	background-color: #CE5043;
 	padding:5px 0px 15px 0px;
 	font-size:16px;
@@ -152,4 +226,3 @@ body {
 	-moz-border-radius: 3px;
 	-webkit-border-radius: 3px;
 	border-radius: 3px;}
-

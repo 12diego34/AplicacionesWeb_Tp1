@@ -1,53 +1,47 @@
 <!DOCTYPE html>
 <html>
-<head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Formulario de inserci&oacute;n</title>
-<link rel="shortcut icon" href="http://www.dit.ing.unp.edu.ar/wp-content/uploads/favicon.png" type="image/x-icon" />
-  <link rel="stylesheet" type="text/css" href="content/css/bootstrap.min.css">
-  <link rel="stylesheet" type="text/css" href="content/css/style.css"media="screen" />
-  <link rel="stylesheet" type="text/css" href="content/css/slidedvm.min.css"media="screen" />
-
-  <script type="text/javascript" src="content/js/jquery-2.2.3.min.js" ></script>
-  <script type="text/javascript" src="content/js/bootstrap.min.js"></script>
-  <script type="text/javascript" src="content/js/buscar.js"></script>
-
-</style>
-</head>
-
-<body>
-  <div class="marco">
-    <div class="logo">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+    <title>Formulario de inserci&oacute;n</title>
+    <link rel="shortcut icon" href="http://www.dit.ing.unp.edu.ar/wp-content/uploads/favicon.png" type="image/x-icon" />
+    <link rel="stylesheet" type="text/css" href="content/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="content/css/style.css"media="screen" />
+    <script type="text/javascript" src="content/js/jquery-2.2.3.min.js" ></script>
+    <script type="text/javascript" src="content/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="content/js/buscar.js"></script>
+  </head>
+  <body>
+    <div class="marco">
+      <div class="logo">
         <h1><a href=" http://www.dit.ing.unp.edu.ar/"></a></h1> 
+      </div>
+      <div class="toppic">
+        <h3 class="cabecera">Agregar pel&iacute;cula</h3>
+      </div>
+      <div class="contenedor">
+        <form id="form" name="form" method="post" action="insertapeliculas.php">
+          <h5>Nombre:
+            <input name="nombre" type="text" id="nombre" size="24" />
+          </h5>
+          <br>
+          <h5> Calificación: 
+            <input name="ponderacion" type="text" id="ponderacion" size="2" />
+          </h5><br>
+          <h5> Id: 
+            <input name="identificador" type="text" id="identificador" size="10" />
+          </h5>
+          <br>
+          <h5> Url: 
+            <input name="url" type="text" id="url" size="30" />
+          </h5>   
+          <br></br>
+            <input name="Enviar" type="submit" class="btn-success" value="Guardar"/>
+            <input value = "Volver" type="button" class="btn-defult" onclick="location.href='index.html';" />
+        </form>
+      </div>  
+      <div class="footer">
+        <p>* Diego Carabajal - Carla Santos *</p>
+      </div>
     </div>
-    <div class="toppic">
-        <h3 class="cabecera">Agregar pel&iacute;culas</h3>
-    </div>
-    <div class="contenedor">
-      <form id="form" name="form" method="post" action="insertapeliculas.php">
-        <h5>Nombre:
-          <input name="nombre" type="text" id="nombre" size="24" />
-        </h5>
-        <br>
-        <h5> Calificación: 
-          <input name="ponderacion" type="text" id="ponderacion" size="2" />
-        </h5><br>
-        <h5> Id: 
-          <input name="identificador" type="text" id="identificador" size="10" />
-        </h5>
-        <br>
-        <h5> Url: 
-          <input name="url" type="text" id="url" size="30" />
-        </h5>   
-        <br>
-          <input name="Enviar" type="submit" value="Guardar"/>
-          <input value = "Volver" type="button" class="button_active" onclick="location.href='index.php';" />
-      </form>
-    </div>  
-    <div class="footer">
-    <p>* Diego Carabajal - Carla Santos *</p>
-  </div>
-  </div>
-  
   </body>
 </html> 

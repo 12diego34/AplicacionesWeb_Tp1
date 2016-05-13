@@ -8,8 +8,6 @@ class Pelicula {
   public $ponderacion;
 }
 
-//$pelicula = new Pelicula();
-
 if (!empty($_GET['id'])){
 	$identificador = $_GET['id'];
 }
@@ -30,5 +28,9 @@ if (mysql_num_rows($consulta)!=0){
 		$peliculas[] = $pelicula;
 	}
 }
+else{
+	echo "<strong>No existe la pelicula solicitada</strong>";
+}
+
 echo json_encode($peliculas);
 ?>	
