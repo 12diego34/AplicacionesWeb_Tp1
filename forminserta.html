@@ -20,27 +20,22 @@
       </div>
       <div class="contenedor">
         <form id="form" name="form" method="post" action="insertapeliculas.php">
-          <h5>Nombre:
-            <input name="nombre" type="text" id="nombre" size="24" />
+          <h5>Nombre:<br>
+            <input name="nombre" type="text" class="left" id="nombre"/>
+          </h5>
+          <h5>Calificación:<br>
+            <input class="left" name="ponderacion" type="text" id="ponderacion"/>
+          </h5>
+          <h5>Id:<br>
+            <input class="left" name="identificador" type="text" id="identificador"/>
+          </h5>
+          <h5>Url:<br>
+            <input class="left" name="url" type="text" id="url"/>
           </h5>
           <br>
-          <h5> Calificación: 
-            <input name="ponderacion" type="text" id="ponderacion" size="2" />
-          </h5><br>
-          <h5> Id: 
-            <input name="identificador" type="text" id="identificador" size="10" />
-          </h5>
-          <br>
-          <h5> Url: 
-            <input name="url" type="text" id="url" size="30" />
-          </h5>   
-          <br></br>
-            <input name="Enviar" type="submit" class="btn-success" value="Guardar"/>
-            <input value = "Volver" type="button" class="btn-defult" onclick="location.href='index.html';" />
+          <input name="Enviar" type="submit" align="center"class="btn-success" value="Guardar"/>
+          <input value = "Volver" type="button" class="btn-defult" onclick="location.href='index.html';" />
         </form>
-      </div>  
-      <div class="footer">
-        <p>* Diego Carabajal - Carla Santos *</p>
       </div>
     </div>
   </body>

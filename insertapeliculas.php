@@ -24,11 +24,12 @@
 						$url = $_POST['url'];
 						$identificador = $_POST['identificador'];
 						if (empty($nombre) and empty($ponderacion) and empty($url) and empty($identificador)) {  
-    						echo "Todos los campos son obligatorios"; 
+    						echo "<h4><strong>Ingreso de pelicula rechazado</strong><br></h4>";
+    						echo "<strong>Todos los campos son obligatorios</strong>"; 
     					}
     					else{	
 						$result = mysql_query("INSERT INTO pelicula (nombre, ponderacion, identificador,url) VALUES ('$nombre', '$ponderacion', '$identificador', '$url')", $conexion);
-							echo "<strong>Pelicula insertada con exito!!</strong>";
+							echo "<h4><strong>Pelicula insertada con exito!!</strong></h4>";
 						}
 					?>
 					<br></br>

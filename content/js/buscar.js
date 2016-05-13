@@ -26,8 +26,7 @@ jQuery(document).ready(function (){
                 data: {id: jQuery('#id').val()}
             }).done(function( data ) {
                 mostrar_peliculas(data, search_term);
-            })
-        });
+                });
     }
   
     function mostrar_peliculas(data, search_term){
