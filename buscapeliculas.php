@@ -3,9 +3,10 @@ header('Content-type: application/json');
 include("conectarDb.php");
 
 class Pelicula {
+  public $ponderacion; 
   public $identificador;
   public $nombre;
-  public $ponderacion;
+  
 }
 
 if (!empty($_GET['id'])){
@@ -22,9 +23,9 @@ if (mysql_num_rows($consulta)!=0){
 	while($row=mysql_fetch_assoc($consulta)) 
 	{
 		$pelicula = new Pelicula();
+		$pelicula->ponderacion=$row['ponderacion'];
 		$pelicula->identificador=$row['identificador'];
 		$pelicula->nombre=$row['nombre'];
-		$pelicula->ponderacion=$row['ponderacion'];
 		$peliculas[] = $pelicula;
 	}
 }
