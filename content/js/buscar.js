@@ -91,7 +91,7 @@ jQuery(document).ready(function (){
             "<img id='' class='portada' src='http://image.tmdb.org/t/p/w150"+ data.poster_path +"' alt='' />" +
             "<div class='puntaje puntaje-modal'>" +
             "    <input type='hidden' data-readonly" +
-            "    name='rating' id='rating-"+data.id+"' class='rating' data-filled='glyphicon glyphicon-star'" +
+            "    name='rating' id='rating-"+data.imdb_id+"' class='rating' data-filled='glyphicon glyphicon-star'" +
             "    data-empty='glyphicon glyphicon-star-empty' value=''/>"+
             "</div>";
             jQuery("#myModal #info").html(markup_pelicula);
